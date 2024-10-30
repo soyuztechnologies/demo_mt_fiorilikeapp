@@ -9,6 +9,7 @@
         'use strict';
         return Controller.extend("mt.fin.ap.ab.controller.View2", {
             onInit: function(){
+                //this is a comment
                 var oRouter = this.getOwnerComponent().getRouter();
                 //We attach a function which gets called everytime the route changes
                 //When does the route change ??

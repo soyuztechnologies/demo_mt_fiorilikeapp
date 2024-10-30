@@ -1,0 +1,27 @@
+{
+  "name": "fiorilikeapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "ui5 build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "npm run build && fiori deploy --config ui5-deploy.yaml && rimraf archive.zip",
+    "undeploy": "fiori undeploy --config ui5-deploy.yaml",
+    "deploy-test": "npm run build && fiori deploy --config ui5-deploy.yaml --testMode true"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sap/ux-ui5-tooling": "^1.15.3"
+  },
+  "devDependencies": {
+    "rimraf": "^5.0.5",
+    "ui5-task-flatten-library": "3.0.2"
+  },
+  "ui5": {
+    "dependencies": [
+      "ui5-task-flatten-library"
+    ]
+  }
+}
